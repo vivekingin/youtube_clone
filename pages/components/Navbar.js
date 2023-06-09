@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function Navbar({isLoggedIn, notifications}){
     const profileurl = isLoggedIn ? '/images/profile.jpg' : '/images/user.svg';
     return (
-        <div className="flex justify-between items-center py-1 lg:py-3 px-3 lg:px-5">
+        <div className="flex justify-between items-center py-1 lg:py-3 px-3 lg:px-5 sticky top-0 bg-black">
             <div className="flex items-center gap-1">
                 <Image className="" src="/images/yt_logo.svg" alt="YT logo" width={42} height={42}/>
             </div>
