@@ -1,11 +1,12 @@
 import Image from "next/image"
+import Link from "next/link";
 
 export default function Navbar({isLoggedIn, notifications}){
     const profileurl = isLoggedIn ? '/images/profile.jpg' : '/images/user.svg';
     return (
         <div className="flex justify-between items-center py-1 lg:py-3 px-3 lg:px-5 sticky top-0 bg-black">
             <div className="flex items-center gap-1">
-                <Image className="" src="/images/yt_logo.svg" alt="YT logo" width={42} height={42}/>
+                <Link href='/'><Image className="" src="/images/yt_logo.svg" alt="YT logo" width={42} height={42}/></Link>
             </div>
             <form className="hidden border-[1px] border-[#303030] rounded-full lg:flex items-center overflow-hidden w-1/2">
                 <input type="text" placeholder="Search" className=" w-full bg-inherit text-white p-1 px-3 focus:outline-none placeholder:text-[#303030]"/>
